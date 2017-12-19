@@ -12,7 +12,7 @@ src
 |- Task.scala (which contains the main function)
 ```
 
-This uses movie lens dataset provided as `ratings.dat` and `users.dat`. The code is flexible to use any bigger datasets of movie lens.
+This uses movie lens dataset provided as `ratings.dat` and `users.dat`. The code is flexible to use any bigger datasets of movie lens. The data set can be found [here](https://grouplens.org/datasets/movielens/).
 
 The class `SONAlgorithm` contains the distributed implementation of the frequent itemset identification. `Task` is a tester code that identifies frequently watched movies by all `male` users in the movie lens dataset. The `IOHandler` and `SparkContextBuilder` are helper classes for data processing and context initialization.
 
@@ -32,4 +32,4 @@ The distributed nature of the SON algorithm allows you to easily identify freque
 
 CAUTION: There can be cases when the partitions are created in a skewed way which creates all itemsets as frequent which doesn't give us any advantage. It is essential that the transactions (or buckets) are randomized before partitioning them.
 
-NOTE: This contains only scala code and not a runnable component. This is part of a much larger project and the code has been extracted and anonymized. Feel free to import it into personal projects and use it for learning purpose. 
+NOTE: This contains only scala code and not a runnable component. This is part of a much larger project and the code has been extracted and anonymized. Feel free to import it into personal projects and use it for learning purpose.
