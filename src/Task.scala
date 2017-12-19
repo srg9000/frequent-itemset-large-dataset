@@ -39,7 +39,7 @@ object Task {
 
         val frequentItems = new SONAlgorithm().son(transactions , support)
 
-        IOHandling.writeOutput(frequentItems.sortWith(lengthSort), "Sriram_Baskaran_SON.case1_" + support + ".txt")
+        IOHandling.writeOutput(frequentItems.sortWith(lengthSort), "output_" + support + ".txt")
 
     }
 
